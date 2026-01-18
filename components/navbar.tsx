@@ -41,6 +41,13 @@ export function Navbar() {
               <span>+92 329 4474104</span>
             </a>
             <a
+              href="tel:+923274400236"
+              className="flex items-center gap-2 text-foreground/70 transition-colors hover:text-primary"
+            >
+              <Phone className="h-3.5 w-3.5" />
+              <span>+92 327 4400236</span>
+            </a>
+            <a
               href="mailto:info@highlinkspk.com"
               className="flex items-center gap-2 text-foreground/70 transition-colors hover:text-primary"
             >

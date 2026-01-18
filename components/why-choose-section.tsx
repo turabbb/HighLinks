@@ -34,7 +34,7 @@ const reasons = [
   {
     icon: Sparkles,
     title: "Proven Track Record",
-    description: "With 10,000+ successful placements and 98% visa success rate, our results speak for themselves.",
+    description: "With 1,000+ successful placements and 98% visa success rate, our results speak for themselves.",
   },
 ]
 
@@ -55,7 +55,7 @@ export function WhyChooseSection() {
               Your Success Is Our Priority
             </h2>
             <p className="mt-4 text-pretty text-lg text-muted-foreground">
-              For over 15 years, we have been helping students turn their international education dreams into reality.
+              Since 2022, we have been helping students turn their international education dreams into reality.
               Here is what sets us apart.
             </p>
 

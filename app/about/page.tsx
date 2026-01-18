@@ -7,21 +7,16 @@ import { Target, Eye, Heart, Award, Users, Globe, CheckCircle2 } from "lucide-re
 
 const milestones = [
   {
-    year: "2009",
+    year: "2022",
     title: "Founded",
     description: "HighLinks established in Lahore with a vision to help students study abroad.",
   },
-  { year: "2015", title: "5000+ Students", description: "Milestone of 5000 successful student placements achieved." },
-  { year: "2018", title: "Award Winning", description: "Recognized as Best Study Abroad Consultancy in Pakistan." },
+  { year: "2023", title: "Rapid Growth", description: "Expanded partnerships with top global universities and recruitment platforms." },
+  { year: "2024", title: "1000+ Students", description: "Milestone of 1000 successful student placements achieved." },
   {
-    year: "2021",
-    title: "Digital First",
-    description: "Launched virtual counseling services reaching students nationwide.",
-  },
-  {
-    year: "2024",
-    title: "10000+ Students",
-    description: "Celebrating 10,000+ successful placements across 50+ countries.",
+    year: "2025",
+    title: "Award Winning",
+    description: "Recognized as a leading study abroad consultancy in Pakistan.",
   },
 ]
 
@@ -49,15 +44,15 @@ const values = [
 ]
 
 const partners = [
-  "StudyReach",
-  "Shorelight",
-  "Global University Systems",
-  "ApplyBoard",
-  "KC Overseas",
-  "Crizac",
-  "ED Chimp",
-  "UniPartner",
-  "Oxford International",
+  { name: "StudyReach", logo: "/studyreach.png" },
+  { name: "Shorelight", logo: "/shorelight.png" },
+  { name: "Global University Systems", logo: "/gus.png" },
+  { name: "ApplyBoard", logo: "/applyboard.png" },
+  { name: "KC Overseas", logo: "/kcoverseas.png" },
+  { name: "Crizac", logo: "/crizac.png" },
+  { name: "ED Chimp", logo: "/edchimp.png" },
+  { name: "UniPartner", logo: "/unipartner.png" },
+  { name: "Oxford International", logo: "/oxfordInternationGroup.png" },
 ]
 
 export default function AboutPage() {
@@ -66,8 +61,8 @@ export default function AboutPage() {
       <Navbar />
       <PageHero
         subtitle="About Us"
-        title="Guiding Dreams Since 2009"
-        description="For over 15 years, HighLinks has been helping Pakistani students achieve their international education dreams with expert guidance and unwavering support."
+        title="Guiding Dreams Since 2022"
+        description="Since 2022, HighLinks has been helping Pakistani students achieve their international education dreams with expert guidance and unwavering support."
       />
 
       {/* Mission & Vision */}
@@ -113,13 +108,13 @@ export default function AboutPage() {
                 From Humble Beginnings to Industry Leadership
               </h2>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                HighLinks was founded in 2009 by Muhammad Ahmed Khan, who experienced firsthand the challenges of
-                navigating the study abroad process. What began as a small consultancy in Lahore has grown into one of
+                HighLinks was founded in 2022 by Adnan Farooq, who experienced firsthand the challenges of
+                navigating the study abroad process. What began as a small consultancy in Lahore has quickly grown into one of
                 Pakistan's most respected education consultancies.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Today, with offices in Lahore, Karachi, and Islamabad, and a team of 50+ expert counselors, we have
-                helped over 10,000 students achieve their dreams of studying at prestigious universities worldwide.
+                Today, from our office in Lahore and with a team of dedicated expert counselors, we have
+                helped thousands of students achieve their dreams of studying at prestigious universities worldwide.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 Our philosophy remains unchanged: every student deserves personalized guidance, transparent processes,
@@ -195,10 +190,19 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
             {partners.map((partner) => (
               <div
-                key={partner}
-                className="flex items-center justify-center rounded-xl border border-border/50 bg-card p-6 text-center transition-all duration-300 hover:border-primary/20 hover:shadow-lg"
+                key={partner.name}
+                className="flex flex-col items-center justify-center rounded-xl border border-border/50 bg-card p-4 transition-all duration-300 hover:border-primary/20 hover:shadow-lg"
               >
-                <p className="font-medium text-foreground">{partner}</p>
+                <div className="mb-2 flex h-16 w-full items-center justify-center bg-white rounded-lg p-2">
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={120}
+                    height={48}
+                    className="h-auto max-h-12 w-auto max-w-full object-contain"
+                  />
+                </div>
+                <p className="text-sm font-medium text-foreground text-center">{partner.name}</p>
               </div>
             ))}
           </div>
@@ -210,7 +214,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid gap-6 md:grid-cols-4">
             {[
-              { icon: Users, value: "10,000+", label: "Students Placed" },
+              { icon: Users, value: "1,000+", label: "Students Placed" },
               { icon: Globe, value: "50+", label: "Countries" },
               { icon: Award, value: "500+", label: "Partner Universities" },
               { icon: CheckCircle2, value: "98%", label: "Visa Success Rate" },

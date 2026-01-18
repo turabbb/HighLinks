@@ -8,56 +8,56 @@ import { ArrowRight } from "lucide-react"
 const destinations = [
   {
     country: "United States",
-    code: "US",
+    code: "usa",
     flag: "https://flagcdn.com/w320/us.png",
     universities: "500+",
     description: "Home to Ivy League and world-renowned research universities",
   },
   {
     country: "United Kingdom",
-    code: "UK",
+    code: "uk",
     flag: "https://flagcdn.com/w320/gb.png",
     universities: "150+",
     description: "Experience centuries of academic excellence and rich culture",
   },
   {
     country: "Australia",
-    code: "AU",
+    code: "australia",
     flag: "https://flagcdn.com/w320/au.png",
     universities: "40+",
     description: "World-class institutions in vibrant, multicultural cities",
   },
   {
     country: "Canada",
-    code: "CA",
+    code: "canada",
     flag: "https://flagcdn.com/w320/ca.png",
     universities: "100+",
     description: "Quality education with excellent post-study work opportunities",
   },
   {
     country: "Ireland",
-    code: "IE",
+    code: "ireland",
     flag: "https://flagcdn.com/w320/ie.png",
     universities: "30+",
     description: "Gateway to Europe with English-taught programs",
   },
   {
     country: "Sweden",
-    code: "SE",
+    code: "sweden",
     flag: "https://flagcdn.com/w320/se.png",
     universities: "35+",
     description: "Innovation hub with world-leading research universities",
   },
   {
     country: "Finland",
-    code: "FI",
+    code: "finland",
     flag: "https://flagcdn.com/w320/fi.png",
     universities: "25+",
     description: "Top-ranked education system with cutting-edge research",
   },
   {
     country: "Latvia",
-    code: "LV",
+    code: "latvia",
     flag: "https://flagcdn.com/w320/lv.png",
     universities: "20+",
     description: "Affordable European education with diverse programs",
@@ -128,7 +128,7 @@ export function DestinationsSection() {
           {duplicatedDestinations.map((dest, index) => (
             <Link
               key={`${dest.code}-${index}`}
-              href="/student-visa"
+              href={`/study-abroad/${dest.code}`}
               className="group relative min-w-[280px] flex-shrink-0 overflow-hidden rounded-2xl border border-border/50 bg-card transition-all duration-500 hover:-translate-y-1 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 md:min-w-[300px]"
             >
               {/* Flag image */}

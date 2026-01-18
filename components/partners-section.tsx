@@ -1,52 +1,53 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import Image from "next/image"
 
 const partners = [
   {
     name: "StudyReach",
     description: "Global student recruitment platform by AECC Global",
-    logo: "SR",
+    logo: "/studyreach.png",
   },
   {
     name: "Shorelight",
     description: "University pathway programs",
-    logo: "SL",
+    logo: "/shorelight.png",
   },
   {
     name: "Global University Systems",
     description: "International education network",
-    logo: "GUS",
+    logo: "/gus.png",
   },
   {
     name: "ApplyBoard",
     description: "AI-powered international recruitment",
-    logo: "AB",
+    logo: "/applyboard.png",
   },
   {
     name: "KC Overseas",
     description: "Education consulting services",
-    logo: "KC",
+    logo: "/kcoverseas.png",
   },
   {
     name: "Crizac",
     description: "Student placement solutions",
-    logo: "CZ",
+    logo: "/crizac.png",
   },
   {
     name: "ED Chimp",
     description: "Digital education platform",
-    logo: "ED",
+    logo: "/edchimp.png",
   },
   {
     name: "UniPartner",
     description: "University partnership network",
-    logo: "UP",
+    logo: "/unipartner.png",
   },
   {
     name: "Oxford International",
     description: "30+ years in education, 500K+ students served",
-    logo: "OI",
+    logo: "/oxfordInternationGroup.png",
   },
 ]
 
@@ -114,9 +115,15 @@ export function PartnersSection() {
                 key={`${partner.name}-${index}`}
                 className="group flex min-w-[280px] flex-shrink-0 flex-col items-center rounded-2xl border border-border/50 bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
               >
-                {/* Logo placeholder */}
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 text-xl font-bold text-primary transition-transform duration-300 group-hover:scale-110">
-                  {partner.logo}
+                {/* Logo image */}
+                <div className="mb-4 flex h-20 w-40 items-center justify-center rounded-xl bg-white p-3 transition-transform duration-300 group-hover:scale-105">
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={140}
+                    height={60}
+                    className="h-auto max-h-14 w-auto max-w-full object-contain"
+                  />
                 </div>
                 <h3 className="mb-1 text-center font-semibold text-foreground">{partner.name}</h3>
                 <p className="text-center text-sm text-muted-foreground">{partner.description}</p>

@@ -5,7 +5,7 @@ import { Award, GraduationCap, Building2, CheckCircle2 } from "lucide-react"
 
 const stats = [
   { icon: Award, value: 15, suffix: "+", label: "Years of Experience" },
-  { icon: GraduationCap, value: 10000, suffix: "+", label: "Students Placed" },
+  { icon: GraduationCap, value: 1000, suffix: "+", label: "Students Placed" },
   { icon: Building2, value: 500, suffix: "+", label: "Partner Universities" },
   { icon: CheckCircle2, value: 98, suffix: "%", label: "Visa Success Rate" },
 ]

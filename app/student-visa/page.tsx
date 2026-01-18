@@ -309,7 +309,7 @@ export default function StudentVisaPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 p-6 text-center">
                   <Shield className="mx-auto mb-2 h-8 w-8 text-primary" />
-                  <div className="text-2xl font-bold text-foreground">10,000+</div>
+                  <div className="text-2xl font-bold text-foreground">1,000+</div>
                   <p className="text-sm text-muted-foreground">Successful Visas</p>
                 </div>
                 <div className="rounded-xl bg-gradient-to-br from-accent/10 to-primary/10 p-6 text-center">

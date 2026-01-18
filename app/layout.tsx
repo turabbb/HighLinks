@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
 import "./globals.css"
 import { WhatsAppButton } from "@/components/whatsapp-button"
+import { WelcomePopup } from "@/components/welcome-popup"
 
 const _inter = Inter({ subsets: ["latin"] })
 const _playfair = Playfair_Display({ subsets: ["latin"] })
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className={`font-sans antialiased`}>
         {children}
         <WhatsAppButton />
+        <WelcomePopup />
       </body>
     </html>
   )

@@ -103,6 +103,15 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href="tel:+923274400236"
+                  className="flex items-start gap-3 text-background/70 transition-colors hover:text-background"
+                >
+                  <Phone className="mt-0.5 h-5 w-5 flex-shrink-0" />
+                  <span>+92 327 4400236</span>
+                </a>
+              </li>
+              <li>
+                <a
                   href="mailto:info@highlinkspk.com"
                   className="flex items-start gap-3 text-background/70 transition-colors hover:text-background"
                 >

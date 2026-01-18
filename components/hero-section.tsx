@@ -1,11 +1,12 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { ArrowRight, Plane, Sparkles } from "lucide-react"
 
 export function HeroSection() {
   const globeRef = useRef<HTMLDivElement>(null)
+  const [planePosition, setPlanePosition] = useState({ x: 50, y: 50, rotation: 45 })
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -18,6 +19,46 @@ export function HeroSection() {
     }
     window.addEventListener("mousemove", handleMouseMove)
     return () => window.removeEventListener("mousemove", handleMouseMove)
+  }, [])
+
+  // Animate plane with random floating motion in the center of the globe
+  useEffect(() => {
+    let targetX = 50
+    let targetY = 50
+    let currentX = 50
+    let currentY = 50
+    let animationId: number
+
+    const generateNewTarget = () => {
+      // Keep plane in center area (30% to 70% of globe)
+      targetX = 30 + Math.random() * 40
+      targetY = 30 + Math.random() * 40
+    }
+
+    const animate = () => {
+      // Smooth interpolation towards target
+      currentX += (targetX - currentX) * 0.02
+      currentY += (targetY - currentY) * 0.02
+
+      // Calculate rotation based on movement direction
+      const dx = targetX - currentX
+      const dy = targetY - currentY
+      const rotation = Math.atan2(dy, dx) * (180 / Math.PI) + 90
+
+      setPlanePosition({ x: currentX, y: currentY, rotation })
+
+      // Generate new target when close to current target
+      if (Math.abs(targetX - currentX) < 1 && Math.abs(targetY - currentY) < 1) {
+        generateNewTarget()
+      }
+
+      animationId = requestAnimationFrame(animate)
+    }
+
+    generateNewTarget()
+    animationId = requestAnimationFrame(animate)
+
+    return () => cancelAnimationFrame(animationId)
   }, [])
 
   return (
@@ -39,7 +80,7 @@ export function HeroSection() {
             <div className="animate-fade-in-up">
               <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary shadow-lg shadow-primary/10">
                 <Sparkles className="h-4 w-4" />
-                Trusted by 10,000+ Students
+                Trusted by 1,000+ Students
               </span>
             </div>
 
@@ -73,8 +114,7 @@ export function HeroSection() {
             </div>
 
             <p className="mt-6 animate-fade-in-up text-sm text-muted-foreground [animation-delay:400ms]">
-              <span className="font-medium text-foreground">Your Future, Our Concern</span> — 15+ years of guiding
-              dreams
+              <span className="font-medium text-foreground">Your Future, Our Concern</span> — Guiding dreams since 2022
             </p>
           </div>
 
@@ -105,38 +145,73 @@ export function HeroSection() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-t from-primary/15 to-transparent" />
                 </div>
 
-                {/* Floating destination cards - enhanced */}
-                <div className="animate-float absolute -left-4 top-16 rounded-xl border border-border bg-card/95 p-3 shadow-xl backdrop-blur-sm [animation-delay:0s]">
+                {/* Floating destination cards - all 8 countries */}
+                <div className="animate-float absolute -left-4 top-8 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:0s]">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl">🇺🇸</span>
-                    <span className="text-sm font-medium">USA</span>
+                    <span className="text-xl">🇺🇸</span>
+                    <span className="text-xs font-medium">USA</span>
                   </div>
                 </div>
 
-                <div className="animate-float absolute -right-4 top-1/3 rounded-xl border border-border bg-card/95 p-3 shadow-xl backdrop-blur-sm [animation-delay:1s]">
+                <div className="animate-float absolute -right-4 top-12 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:0.5s]">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl">🇬🇧</span>
-                    <span className="text-sm font-medium">UK</span>
+                    <span className="text-xl">🇬🇧</span>
+                    <span className="text-xs font-medium">UK</span>
                   </div>
                 </div>
 
-                <div className="animate-float absolute -left-8 bottom-1/4 rounded-xl border border-border bg-card/95 p-3 shadow-xl backdrop-blur-sm [animation-delay:2s]">
+                <div className="animate-float absolute -left-8 top-1/3 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:1s]">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl">🇨🇦</span>
-                    <span className="text-sm font-medium">Canada</span>
+                    <span className="text-xl">🇨🇦</span>
+                    <span className="text-xs font-medium">Canada</span>
                   </div>
                 </div>
 
-                <div className="animate-float absolute -bottom-2 right-8 rounded-xl border border-border bg-card/95 p-3 shadow-xl backdrop-blur-sm [animation-delay:1.5s]">
+                <div className="animate-float absolute -right-6 top-1/2 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:1.5s]">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl">🇦🇺</span>
-                    <span className="text-sm font-medium">Australia</span>
+                    <span className="text-xl">🇦🇺</span>
+                    <span className="text-xs font-medium">Australia</span>
                   </div>
                 </div>
 
-                {/* Animated plane */}
-                <div className="absolute right-0 top-8 animate-bounce [animation-duration:3s]">
-                  <Plane className="h-8 w-8 rotate-45 text-accent" />
+                <div className="animate-float absolute -left-6 bottom-1/3 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:2s]">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">🇮🇪</span>
+                    <span className="text-xs font-medium">Ireland</span>
+                  </div>
+                </div>
+
+                <div className="animate-float absolute -bottom-2 right-4 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:2.5s]">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">🇸🇪</span>
+                    <span className="text-xs font-medium">Sweden</span>
+                  </div>
+                </div>
+
+                <div className="animate-float absolute -bottom-4 left-8 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:3s]">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">🇫🇮</span>
+                    <span className="text-xs font-medium">Finland</span>
+                  </div>
+                </div>
+
+                <div className="animate-float absolute bottom-1/4 -right-8 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:3.5s]">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">🇱🇻</span>
+                    <span className="text-xs font-medium">Latvia</span>
+                  </div>
+                </div>
+
+                {/* Animated plane - floating randomly in center */}
+                <div 
+                  className="absolute transition-all duration-1000 ease-out"
+                  style={{
+                    left: `${planePosition.x}%`,
+                    top: `${planePosition.y}%`,
+                    transform: `translate(-50%, -50%) rotate(${planePosition.rotation}deg)`,
+                  }}
+                >
+                  <Plane className="h-8 w-8 text-accent drop-shadow-lg" />
                 </div>
               </div>
             </div>
