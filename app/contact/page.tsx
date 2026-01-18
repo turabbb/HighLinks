@@ -434,7 +434,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Office Hours</h3>
-                    <p className="text-sm text-muted-foreground">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                    <p className="text-sm text-muted-foreground">Monday - Saturday: 10:00 AM - 6:00 PM</p>
                     <p className="text-sm text-muted-foreground">Sunday: Closed</p>
                   </div>
                 </div>
@@ -510,6 +510,13 @@ export default function ContactPage() {
                       className="text-muted-foreground transition-colors hover:text-primary"
                     >
                       {office.phone}
+                    </a>
+                    <br />
+                    <a
+                      href={`tel:${office.phone2.replace(/\s/g, '')}`}
+                      className="text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      {office.phone2}
                     </a>
                   </div>
                 </div>
