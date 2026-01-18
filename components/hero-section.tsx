@@ -85,8 +85,8 @@ export function HeroSection() {
             </div>
 
             <h1 className="animate-fade-in-up text-balance font-serif text-4xl font-bold leading-tight tracking-tight text-foreground [animation-delay:100ms] md:text-5xl lg:text-6xl">
-              Study Abroad with{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Confidence</span>
+              Welcome to{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">HighLinks</span>
             </h1>
 
             <p className="mt-6 animate-fade-in-up text-pretty text-lg leading-relaxed text-muted-foreground [animation-delay:200ms] md:text-xl">
@@ -145,60 +145,91 @@ export function HeroSection() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-t from-primary/15 to-transparent" />
                 </div>
 
-                {/* Floating destination cards - all 8 countries */}
-                <div className="animate-float absolute -left-4 top-8 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:0s]">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🇺🇸</span>
-                    <span className="text-xs font-medium">USA</span>
+                {/* Floating destination cards - all 12 countries, evenly distributed */}
+                {/* Top row */}
+                <div className="animate-float absolute -left-2 top-4 rounded-lg border border-border bg-card/95 px-2 py-1.5 shadow-lg backdrop-blur-sm [animation-delay:0s]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🇺🇸</span>
+                    <span className="text-[10px] font-medium">USA</span>
                   </div>
                 </div>
 
-                <div className="animate-float absolute -right-4 top-12 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:0.5s]">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🇬🇧</span>
-                    <span className="text-xs font-medium">UK</span>
+                <div className="animate-float absolute left-1/4 -top-2 rounded-lg border border-border bg-card/95 px-2 py-1.5 shadow-lg backdrop-blur-sm [animation-delay:0.3s]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🇬🇧</span>
+                    <span className="text-[10px] font-medium">UK</span>
                   </div>
                 </div>
 
-                <div className="animate-float absolute -left-8 top-1/3 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:1s]">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🇨🇦</span>
-                    <span className="text-xs font-medium">Canada</span>
+                <div className="animate-float absolute right-1/4 -top-2 rounded-lg border border-border bg-card/95 px-2 py-1.5 shadow-lg backdrop-blur-sm [animation-delay:0.6s]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🇨🇦</span>
+                    <span className="text-[10px] font-medium">Canada</span>
                   </div>
                 </div>
 
-                <div className="animate-float absolute -right-6 top-1/2 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:1.5s]">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🇦🇺</span>
-                    <span className="text-xs font-medium">Australia</span>
+                <div className="animate-float absolute -right-2 top-4 rounded-lg border border-border bg-card/95 px-2 py-1.5 shadow-lg backdrop-blur-sm [animation-delay:0.9s]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🇦🇺</span>
+                    <span className="text-[10px] font-medium">Australia</span>
                   </div>
                 </div>
 
-                <div className="animate-float absolute -left-6 bottom-1/3 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:2s]">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🇮🇪</span>
-                    <span className="text-xs font-medium">Ireland</span>
+                {/* Middle row */}
+                <div className="animate-float absolute -left-6 top-1/3 rounded-lg border border-border bg-card/95 px-2 py-1.5 shadow-lg backdrop-blur-sm [animation-delay:1.2s]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🇮🇪</span>
+                    <span className="text-[10px] font-medium">Ireland</span>
                   </div>
                 </div>
 
-                <div className="animate-float absolute -bottom-2 right-4 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:2.5s]">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🇸🇪</span>
-                    <span className="text-xs font-medium">Sweden</span>
+                <div className="animate-float absolute -right-6 top-1/3 rounded-lg border border-border bg-card/95 px-2 py-1.5 shadow-lg backdrop-blur-sm [animation-delay:1.5s]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🇧🇪</span>
+                    <span className="text-[10px] font-medium">Belgium</span>
                   </div>
                 </div>
 
-                <div className="animate-float absolute -bottom-4 left-8 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:3s]">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🇫🇮</span>
-                    <span className="text-xs font-medium">Finland</span>
+                <div className="animate-float absolute -left-6 top-1/2 rounded-lg border border-border bg-card/95 px-2 py-1.5 shadow-lg backdrop-blur-sm [animation-delay:1.8s]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🇨🇾</span>
+                    <span className="text-[10px] font-medium">Cyprus</span>
                   </div>
                 </div>
 
-                <div className="animate-float absolute bottom-1/4 -right-8 rounded-xl border border-border bg-card/95 p-2.5 shadow-xl backdrop-blur-sm [animation-delay:3.5s]">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🇱🇻</span>
-                    <span className="text-xs font-medium">Latvia</span>
+                <div className="animate-float absolute -right-6 top-1/2 rounded-lg border border-border bg-card/95 px-2 py-1.5 shadow-lg backdrop-blur-sm [animation-delay:2.1s]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🇩🇰</span>
+                    <span className="text-[10px] font-medium">Denmark</span>
+                  </div>
+                </div>
+
+                {/* Bottom row */}
+                <div className="animate-float absolute -left-6 bottom-1/3 rounded-lg border border-border bg-card/95 px-2 py-1.5 shadow-lg backdrop-blur-sm [animation-delay:2.4s]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🇭🇺</span>
+                    <span className="text-[10px] font-medium">Hungary</span>
+                  </div>
+                </div>
+
+                <div className="animate-float absolute -right-6 bottom-1/3 rounded-lg border border-border bg-card/95 px-2 py-1.5 shadow-lg backdrop-blur-sm [animation-delay:2.7s]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🇱🇻</span>
+                    <span className="text-[10px] font-medium">Latvia</span>
+                  </div>
+                </div>
+
+                <div className="animate-float absolute left-1/4 -bottom-2 rounded-lg border border-border bg-card/95 px-2 py-1.5 shadow-lg backdrop-blur-sm [animation-delay:3s]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🇸🇪</span>
+                    <span className="text-[10px] font-medium">Sweden</span>
+                  </div>
+                </div>
+
+                <div className="animate-float absolute right-1/4 -bottom-2 rounded-lg border border-border bg-card/95 px-2 py-1.5 shadow-lg backdrop-blur-sm [animation-delay:3.3s]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🇫🇮</span>
+                    <span className="text-[10px] font-medium">Finland</span>
                   </div>
                 </div>
 

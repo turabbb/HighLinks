@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import Link from "next/link"
-import { GraduationCap, FileCheck, Plane, Building, Users, HeadphonesIcon, ArrowRight } from "lucide-react"
+import { GraduationCap, FileCheck, Plane, Building, Users, HeadphonesIcon, ArrowRight, Mic, BookOpen } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 import { cn } from "@/lib/utils"
 
@@ -18,9 +18,14 @@ const services = [
     description: "Complete visa documentation support with 98% success rate across all destinations.",
   },
   {
-    icon: Plane,
-    title: "Pre-Departure Support",
-    description: "Comprehensive preparation including accommodation, travel, and orientation guidance.",
+    icon: BookOpen,
+    title: "IELTS Preparation",
+    description: "Comprehensive IELTS coaching with expert trainers to achieve your target band score.",
+  },
+  {
+    icon: Mic,
+    title: "Interview Preparation",
+    description: "Mock interviews and coaching to help you confidently face university and visa interviews.",
   },
   {
     icon: Building,
@@ -31,6 +36,11 @@ const services = [
     icon: Users,
     title: "Career Counseling",
     description: "Strategic career planning and course selection aligned with your professional goals.",
+  },
+  {
+    icon: Plane,
+    title: "Pre-Departure Support",
+    description: "Comprehensive preparation including accommodation, travel, and orientation guidance.",
   },
   {
     icon: HeadphonesIcon,

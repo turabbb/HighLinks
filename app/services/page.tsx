@@ -11,6 +11,8 @@ import {
   HeadphonesIcon,
   CheckCircle2,
   ArrowRight,
+  Mic,
+  BookOpen,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -40,15 +42,27 @@ const services = [
     ],
   },
   {
-    icon: Plane,
-    title: "Pre-Departure Support",
+    icon: BookOpen,
+    title: "IELTS Preparation",
     description:
-      "Comprehensive preparation for your journey abroad. From accommodation to travel arrangements, we ensure you are fully prepared for your new academic life.",
+      "Comprehensive IELTS coaching program designed to help you achieve your target band score. Our expert trainers provide personalized guidance for all four modules - Listening, Reading, Writing, and Speaking.",
     features: [
-      "Accommodation assistance",
-      "Travel booking guidance",
-      "Orientation sessions",
-      "Packing and preparation tips",
+      "Expert IELTS trainers",
+      "Full-length mock tests",
+      "Individual feedback sessions",
+      "Study materials and resources",
+    ],
+  },
+  {
+    icon: Mic,
+    title: "Interview Preparation",
+    description:
+      "Thorough preparation for university admission and visa interviews. Our coaches conduct mock sessions and provide feedback to help you present yourself confidently and professionally.",
+    features: [
+      "Mock interview sessions",
+      "Common questions preparation",
+      "Body language coaching",
+      "Personalized feedback",
     ],
   },
   {
@@ -73,6 +87,18 @@ const services = [
       "Industry trend analysis",
       "Course and specialization advice",
       "Post-study career planning",
+    ],
+  },
+  {
+    icon: Plane,
+    title: "Pre-Departure Support",
+    description:
+      "Comprehensive preparation for your journey abroad. From accommodation to travel arrangements, we ensure you are fully prepared for your new academic life.",
+    features: [
+      "Accommodation assistance",
+      "Travel booking guidance",
+      "Orientation sessions",
+      "Packing and preparation tips",
     ],
   },
   {

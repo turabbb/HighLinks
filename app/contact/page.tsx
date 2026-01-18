@@ -25,8 +25,9 @@ const office = {
   city: "Lahore",
   address: "2nd Floor, Plaza #38, Block K, Ghazi Road, DHA Phase 1, Lahore",
   phone: "+92 329 4474104",
+  phone2: "+92 327 4400236",
   email: "info@highlinkspk.com",
-  hours: "Mon-Sat: 9:00 AM - 6:00 PM",
+  hours: "Mon-Sat: 10:00 AM - 6:00 PM",
 }
 
 const faqs = [
@@ -382,6 +383,18 @@ export default function ContactPage() {
                     <div>
                       <p className="text-sm text-muted-foreground">Call Us</p>
                       <p className="font-medium text-foreground">+92 329 4474104</p>
+                    </div>
+                  </a>
+                  <a
+                    href="tel:+923274400236"
+                    className="flex items-center gap-4 rounded-xl bg-primary/5 p-4 transition-all duration-300 hover:bg-primary/10 hover:-translate-y-0.5 hover:shadow-md"
+                  >
+                    <div className="rounded-lg bg-primary/10 p-3">
+                      <Phone className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Call Us</p>
+                      <p className="font-medium text-foreground">+92 327 4400236</p>
                     </div>
                   </a>
                   <a

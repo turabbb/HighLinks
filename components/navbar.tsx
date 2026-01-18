@@ -71,7 +71,7 @@ export function Navbar() {
         <nav className="flex items-center justify-between px-4 py-3 md:px-6">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <Logo className="h-10 w-auto" />
+            <Logo className="h-14 w-14" />
           </Link>
 
           {/* Desktop Navigation */}

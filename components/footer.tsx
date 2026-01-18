@@ -38,10 +38,10 @@ export function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <Logo className="h-12 w-12" />
+              <Logo className="h-16 w-16" />
             </div>
             <p className="mb-6 text-background/70">
-              Your trusted partner for international education. Guiding dreams since 2009.
+              Your trusted partner for international education. Guiding dreams since 2022.
             </p>
             <p className="text-lg font-medium text-background/90">Your Future, Our Concern</p>
 

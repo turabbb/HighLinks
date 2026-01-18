@@ -11,10 +11,10 @@ export function Logo({ className, inverted = false }: LogoProps) {
     <Image
       src="/logo.jpeg"
       alt="HighLinks Consultants"
-      width={50}
-      height={50}
+      width={60}
+      height={60}
       className={cn(
-        "h-10 w-10 rounded-full object-cover",
+        "h-14 w-14 rounded-full object-cover",
         inverted && "brightness-0 invert",
         className
       )}

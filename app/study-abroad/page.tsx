@@ -171,6 +171,38 @@ const destinations = [
     highlights: ["Affordable education", "EU degree", "Schengen access"],
     popularCourses: ["Medicine", "IT", "Business", "Engineering"],
   },
+  {
+    country: "Belgium",
+    code: "belgium",
+    flag: "https://flagcdn.com/w320/be.png",
+    universities: "25+",
+    highlights: ["Heart of Europe", "Affordable tuition", "Multilingual environment"],
+    popularCourses: ["Engineering", "Law", "Medicine", "Business"],
+  },
+  {
+    country: "Cyprus",
+    code: "cyprus",
+    flag: "https://flagcdn.com/w320/cy.png",
+    universities: "15+",
+    highlights: ["Mediterranean climate", "English programs", "EU member state"],
+    popularCourses: ["Medicine", "Business", "Hospitality", "IT"],
+  },
+  {
+    country: "Denmark",
+    code: "denmark",
+    flag: "https://flagcdn.com/w320/dk.png",
+    universities: "20+",
+    highlights: ["Innovative education", "Work-life balance", "High quality of life"],
+    popularCourses: ["Engineering", "Design", "Business", "IT"],
+  },
+  {
+    country: "Hungary",
+    code: "hungary",
+    flag: "https://flagcdn.com/w320/hu.png",
+    universities: "30+",
+    highlights: ["Affordable tuition", "Quality medical programs", "Rich culture"],
+    popularCourses: ["Medicine", "Dentistry", "Engineering", "Business"],
+  },
 ]
 
 const benefits = [
