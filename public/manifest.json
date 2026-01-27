@@ -1,0 +1,21 @@
+{
+  "name": "Highlinks",
+  "short_name": "Highlinks",
+  "description": "Your trusted partner for overseas education. Expert guidance for studying in USA, UK, Canada, Australia & Europe.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "icons": [
+    {
+      "src": "/logo.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/logo.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

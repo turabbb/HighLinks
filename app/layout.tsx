@@ -9,16 +9,45 @@ const _inter = Inter({ subsets: ["latin"] })
 const _playfair = Playfair_Display({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "HighLinks | Study Abroad Consultants in Pakistan",
+  title: {
+    default: "Highlinks | Study Abroad Consultants in Pakistan",
+    template: "%s | Highlinks",
+  },
   description:
     "Your trusted partner for overseas education. Expert guidance for studying in USA, UK, Canada, Australia & Europe. Free consultation available.",
   keywords:
     "study abroad consultants, overseas education, student visa, study in USA, study in UK, study in Canada, study in Australia",
   generator: 'v0.app',
+  applicationName: "Highlinks",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: [
+      { url: "/logo.jpeg", type: "image/jpeg" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
+    apple: "/logo.jpeg",
+    shortcut: "/logo.jpeg",
   },
+  openGraph: {
+    type: "website",
+    siteName: "Highlinks",
+    title: "Highlinks | Study Abroad Consultants in Pakistan",
+    description: "Your trusted partner for overseas education. Expert guidance for studying in USA, UK, Canada, Australia & Europe.",
+    images: [
+      {
+        url: "/logo.jpeg",
+        width: 512,
+        height: 512,
+        alt: "Highlinks Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Highlinks | Study Abroad Consultants in Pakistan",
+    description: "Your trusted partner for overseas education.",
+    images: ["/logo.jpeg"],
+  },
+  manifest: "/manifest.json",
 }
 
 export const viewport: Viewport = {
